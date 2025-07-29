@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="HTML5 enhancement assignment: using lists, tables, media, and HTML5 form validation."/>
+  <title>HTML5 Content and Forms</title>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My HTML5 Enhanced Page</h1>
+    <p>This page demonstrates advanced HTML5 features: lists, tables, media, and forms.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>My Daily Tasks</h2>
+      <ul>
+        <li>Review code</li>
+        <li>Write documentation</li>
+        <li>Test form validation</li>
+      </ul>
+
+      <h2>Steps to Submit Assignment</h2>
+      <ol>
+        <li>Complete HTML file</li>
+        <li>Validate structure and content</li>
+        <li>Submit on the platform</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>HTML5 Form Attributes Summary</h2>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Attribute</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>required</td>
+            <td>Makes a field mandatory</td>
+          </tr>
+          <tr>
+            <td>pattern</td>
+            <td>Validates input with a regex</td>
+          </tr>
+          <tr>
+            <td>readonly</td>
+            <td>Prevents editing</td>
+          </tr>
+          <tr>
+            <td>autocomplete</td>
+            <td>Enables browser autofill</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Embedded Media</h2>
+      <figure>
+        <img src="https://via.placeholder.com/300x200" alt="Placeholder image of HTML5 example" />
+        <figcaption>Sample image using semantic <code>&lt;figure&gt;</code></figcaption>
+      </figure>
+
+      <audio controls>
+        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+
+      <video width="320" height="240" controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <section>
+      <h2>Contact Form</h2>
+      <form action="#" method="POST">
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="John Doe" required minlength="3" />
+
+          <br/><br/>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="example@mail.com" required autocomplete="email" />
+
+          <br/><br/>
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="0712345678" required />
+
+          <br/><br/>
+
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required />
+
+          <br/><br/>
+
+          <label for="bio">Short Bio:</label><br/>
+          <textarea id="bio" name="bio" placeholder="Write a short bio..." rows="4" cols="40" minlength="10" required></textarea>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferences</legend>
+
+          <label for="favcolor">Favorite Color:</label>
+          <input type="color" id="favcolor" name="favcolor" />
+
+          <br/><br/>
+
+          <label for="subscription">Subscribe:</label>
+          <input type="checkbox" id="subscription" name="subscription" value="yes" />
+
+          <br/><br/>
+
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender" required>
+            <option value="">--Select--</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="other">Other</option>
+          </select>
+
+          <br/><br/>
+
+          <label>Read-Only Field:</label>
+          <input type="text" value="Static Info" readonly />
+        </fieldset>
+
+        <br/>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 HTML5 Learning Project. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
